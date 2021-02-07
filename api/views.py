@@ -25,19 +25,3 @@ class AnimalViewSet(ModelViewSet):
         # animal = get_object_or_404(queryset, many)
         serializer = AnimalSerializer(queryset, many=True)
         return Response(serializer.data)
-
-
-
-
-        
-
-    # def create(self, request):
-    #     print('on create')
-
-    # def get_queryset(self):
-    #     name = self.kwargs['name']
-    #     return Animal.objects.filter(name=name)
-
-# class AnimalViewSetFilterByName(ModelViewSet):
-#     queryset = Animal.objects.filter()
-#     serializer_class = AnimalSerializer
